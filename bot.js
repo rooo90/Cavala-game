@@ -470,7 +470,7 @@ client.on("message", async message => {
 
 
 const devs = ['526947416658935810'];
-const adminprefix = "#vip";
+const adminprefix = "G";
 client.on('message', message => {
   if (!message.content.startsWith(adminprefix)) return;
   var args = message.content.split(' ').slice(1);
