@@ -7,7 +7,7 @@ client.on("message", message => {
         if (message.guild) {
        let embed = new Discord.RichEmbed()
         let args = message.content.split(' ').slice(1).join(' ');
-    if(message.content.split(' ')[0] == prefix + 'رسالة') {
+    if(message.content.split(' ')[0] == prefix + 'bc') {
         if (!args[1]) {
     message.channel.send("**bc <message>**");
     return;
@@ -32,7 +32,7 @@ client.on("message", message => {
  
 client.on("message", message => {
  
-            if (message.content.startsWith(prefix + "رسالة مخفية")) {
+            if (message.content.startsWith(prefix + "obc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
