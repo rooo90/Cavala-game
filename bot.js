@@ -1,13 +1,13 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "-";
+const prefix = "#";
 client.on("message", message => {
-    var prefix ="-";
+    var prefix ="#";
         if (message.author.id === client.user.id) return;
         if (message.guild) {
        let embed = new Discord.RichEmbed()
         let args = message.content.split(' ').slice(1).join(' ');
-    if(message.content.split(' ')[0] == prefix + 'bc') {
+    if(message.content.split(' ')[0] == prefix + 'رسالة') {
         if (!args[1]) {
     message.channel.send("**bc <message>**");
     return;
@@ -32,7 +32,7 @@ client.on("message", message => {
  
 client.on("message", message => {
  
-            if (message.content.startsWith(prefix + "bco")) {
+            if (message.content.startsWith(prefix + "رسالة مخفية")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -46,7 +46,7 @@ client.on("message", message => {
  
  
    client.on("ready", () => {
-client.user.setGame(`anas alharbi off`,"http://twitch.tv/darkyex")
+client.user.setGame(`anas alharbi`,"http://twitch.tv/darkyex")
  
     });
    
