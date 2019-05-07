@@ -46,7 +46,7 @@ client.on("message", message => {
  
  
    client.on("ready", () => {
-client.user.setGame(`Abed4Gaming#0022 2 buy a bot`,"http://twitch.tv/darkyex")
+client.user.setGame(`anas alharbi off`,"http://twitch.tv/darkyex")
  
     });
    
