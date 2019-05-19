@@ -73,4 +73,52 @@ client.on('message',async message => {
   }
 });
    
+
+  client.on("message",async message => {
+    if(message.content === '-تقديم'){
+    var channel = message.guild.channels.find("name","تقديم")
+        let que = '';
+          let fillter = m => m.author.id === message.author.id
+          await message.channel.send("**اللغة الخاصة في البرمجك**").then(e => {
+               message.channel.awaitMessages(fillter, { time: 60000, max: 1                                    
+    })
+         .then(co => {
+           que = co.first().content;
+            co.first().delete();
+         
+    let quee = '';
+           
+    e.edit("**اذكرانواع الاكواد للنشرها**").then(e => {
+      message.channel.awaitMessages(fillter, { time: 60000, max: 1 })
+   
+         .then(co => {
+           quee = co.first().content;
+            co.first().delete();
+        
+        e.edit("**كم عمرك**").then(e => {
+      message.channel.awaitMessages(fillter, { time: 60000, max: 1 })
+   
+         .then(co => {
+           quee = co.first().content;
+            co.first().delete();
+    e.edit("**تـم ارسـال تقـديـمك للاداره**").then(e => {
+      channel.send(`**__New Submit - تقديم جديد__
+ 
+  Question 1: ${shop}
+  Question 2: ${quee}
+ 
+  Submited By ${message.author}
+  @everyone | @here**`)
+      })
+    })
+      })
+    })
+      })        
+    }
+    });
+
+
+
+
+
     client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
