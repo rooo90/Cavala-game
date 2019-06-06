@@ -467,7 +467,7 @@ client.on("message", async message => {
 });
 
 
-
+var adminprefix = "#";
 
 const devs = ['526947416658935810'];
 const adminprefix = "#vip";
