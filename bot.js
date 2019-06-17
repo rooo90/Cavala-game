@@ -1,14 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
- var PREFIX = "G";
 
 
 
-
-
-
-
-
+var prefix = "#";
 
 client.on('message', message => {
               if(!message.channel.guild) return;
